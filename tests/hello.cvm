@@ -1,0 +1,19 @@
+var x = 10;
+var y = 20;
+
+print(x);
+print(y);
+
+print(x+y);
+
+x = 50;
+
+print(x);
+
+var a = 100;
+var b = 25;
+
+print(a);
+print(b);
+
+print(a+b);
