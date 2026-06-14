@@ -1,44 +1,95 @@
 # CVM++
 
-Custom Virtual Machine and Compiler written in C++.
+CVM++ is a custom scripting language and stack-based virtual machine implemented in C++.
 
 ## Features
 
-- Lexical Analysis (Tokenizer)
-- Recursive Parsing
+- Lexical Analysis (Lexer)
+- Recursive Descent Parser
 - Abstract Syntax Tree (AST)
-- Bytecode Generation
+- Bytecode Compiler
 - Stack-Based Virtual Machine
 - Variable Declaration
 - Variable Assignment
-- Arithmetic Addition
+- Arithmetic Operations
 - Print Statements
 
 ## Project Structure
 
-```txt
+```
 src/
- ├── lexer.cpp
- ├── lexer.h
- ├── parser.cpp
- ├── parser.h
- ├── compiler.cpp
- ├── compiler.h
- ├── vm.cpp
- ├── vm.h
- └── main.cpp
+├── lexer.h
+├── lexer.cpp
+├── parser.h
+├── parser.cpp
+├── compiler.h
+├── compiler.cpp
+├── vm.h
+├── vm.cpp
+└── main.cpp
 
 tests/
- └── hello.cvm
+└── hello.cvm
 ```
 
-## Example Script
+## Example Program
 
 ```c
 var x = 10;
 var y = 20;
 
-print(x+y);
+print(x);
+print(y);
+print(x + y);
+
+x = 50;
+
+print(x);
+```
+
+## Execution Pipeline
+
+Source Code
+
+↓
+
+Lexer
+
+↓
+
+Tokens
+
+↓
+
+Parser
+
+↓
+
+AST
+
+↓
+
+Compiler
+
+↓
+
+Bytecode
+
+↓
+
+Virtual Machine
+
+↓
+
+Output
+
+## Sample Output
+
+```
+10
+20
+30
+50
 ```
 
 ## Build
@@ -52,10 +103,3 @@ g++ src/main.cpp src/lexer.cpp src/parser.cpp src/compiler.cpp src/vm.cpp -o cvm
 ```bash
 ./cvm
 ```
-
-## Sample Output
-
-```txt
-30
-```
-
