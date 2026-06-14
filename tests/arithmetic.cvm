@@ -1,0 +1,10 @@
+var a = 100;
+var b = 25;
+
+print(a);
+print(b);
+print(a+b);
+
+a = 75;
+
+print(a);
